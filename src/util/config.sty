@@ -1,0 +1,76 @@
+% Variables
+\newcommand{\strMyName}{Sebastian Voigt}
+\newcommand{\strDocName}{Latex Template}
+
+\title{\strDocName}
+\author{\strMyName}
+\date{\today}
+
+
+% Remove overfull hboxes when possible
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,factor=1100,stretch=10,shrink=10,protrusion=false]{microtype}
+
+
+\usepackage{kpfonts}
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+% Required for international character input/output
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Australian uses the correct date format
+\usepackage[australian,american]{babel}
+\usepackage{csquotes}
+
+% Use hyperref and set it up
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    pdftitle     = {\strDocName},
+    pdfsubject   = {\strDocName},
+    pdfauthor    = {\strMyName},
+    pdfkeywords  = {template},
+    pdfcreator   = {\strMyName},
+    pdfproducer  = {\strMyName},
+    colorlinks   = false,
+    unicode	     = true,
+    pdftoolbar   = true,
+    pdfmenubar   = true,
+    pdffitwindow = false,
+    pdfnewwindow = true
+}
+
+% Change the section label
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+% Start every new section on a new page
+\newcommand{\sectionbreak}{\clearpage}
+
+\usepackage{titlesec}
+
+% Add references
+\usepackage[
+            style=numeric, % alphabetic, reading
+            sortcites=true,
+            sorting=nyt,
+            backend=biber,
+            urldate=long
+            ]{biblatex}
+
+
+% Glossary
+% ------------------------------------------------------------------------------
+\usepackage[acronym,toc]{glossaries}
+\newglossary[slg]{symbols}{sym}{sbl}{List of Symbols}
+\makeglossaries
+% Make glossary references bold
+\renewcommand{\glstextformat}[1]{\textbf{\em #1}}
+% ------------------------------------------------------------------------------
+
+
+% Table of contents
+% ------------------------------------------------------------------------------
+\setcounter{tocdepth}{5}
+% ------------------------------------------------------------------------------

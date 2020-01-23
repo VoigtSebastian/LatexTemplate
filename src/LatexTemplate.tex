@@ -1,0 +1,26 @@
+\documentclass[a4paper, 12pt]{article} %report
+\usepackage{util/config}
+\input{glossary/glossary.tex}
+
+\addbibresource{references/references.bib}
+
+% ------------------------------- Begin document -------------------------------
+\begin{document}
+
+% use roman numbers for the table of contents
+\pagenumbering{roman}
+% use the title_page latex file as title page
+\maketitle
+
+% Print the table of contents, print page over the page numbers
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\newpage
+
+\input{sections/introduction.tex}
+% Start using arabic number when the actual contents starts
+\pagenumbering{arabic}
+
+\input{apendix/apendix.tex}
+
+\end{document}
