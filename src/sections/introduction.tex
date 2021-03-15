@@ -1,8 +1,27 @@
 \section{Introduction}
 \label{sec:introduction}
 
-Sometimes, life is about the important questions, for example: "When does a bird become a birb?"
-Find the answer in an extremely important guide \cite{asherelbeinWhenIsaBirdaBirb}.
+Citing a website in latex is pretty easy.
+Just click on the link \cite{asherelbeinWhenIsaBirdaBirb}.
+
+Citations are defined in references/references.bib.
 
 \subsection{Using a Glossary}
-One might want to use a format like \gls{yaml} to describe complex data-structures in human-readable format.
+
+When using technical language, one an define a word using a glossary.
+For example, \gls{yaml} is used to describe complex data-structures in
+a human-readable format.
+
+In addition, this glossary entry is an acronym, so there is a definition for
+the acronym \gls{yaml} and the explanation of it \gls{yaml} in the glossary.
+They get separated into different sections automatically.
+
+The usage of \quotes{first} in \gls{yaml} defines the form of the glossary entry on
+first usage.
+
+The glossary, seen in \cref{lst:glossary}, is defined at glossary/glossary.tex.
+
+\lstinputlisting[
+    language=tex,
+    caption={The glossary file},
+    label=lst:glossary]{glossary/glossary.tex}

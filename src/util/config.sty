@@ -21,7 +21,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-% Australian uses the correct date format
+% Australian uses the **correct** date format
 \usepackage[australian,american]{babel}
 \usepackage{csquotes}
 
@@ -40,6 +40,14 @@
     pdfmenubar   = true,
     pdffitwindow = false,
     pdfnewwindow = true
+}
+
+% Some listing settings
+\lstset{
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
 }
 
 % Change the section label
@@ -74,3 +82,16 @@
 % ------------------------------------------------------------------------------
 \setcounter{tocdepth}{5}
 % ------------------------------------------------------------------------------
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+
+% Space instead of indents after paragraph
+\usepackage[parfill]{parskip}
+
+\usepackage{amsthm}
+
+% Use cleveref to make the use of references nicer
+\usepackage[capitalise,noabbrev]{cleveref}
+
+\newcommand{\quotes}[1]{``#1''}
